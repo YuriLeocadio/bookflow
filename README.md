@@ -14,7 +14,7 @@ A ideia é que o histórico de commits e branches conte a história real do apre
 
 ## 🗺️ Roadmap de evolução
 
-- [ ] **1. POO Básica** — modelagem de `Livro`, `Usuário` e `Empréstimo` usando herança, interface, encapsulamento e polimorfismo 🔵
+- [x] **1. POO Básica** — modelagem de `Livro`, `Usuário` e `Empréstimo` usando herança, interface, encapsulamento e polimorfismo 🔵
 - [ ] **2. Tratamento de exceções** — exceção customizada para regra de negócio (ex: livro já emprestado) + carga inicial de dados via arquivo texto
 - [ ] **3. Coleções & Generics** — troca das listas soltas por `Map`/`Set`, com `Comparable`/`Comparator` para ordenação
 - [ ] **4. Streams** — relatórios gerados via Stream (ex: total emprestado por usuário) sem uso de `for` tradicional
