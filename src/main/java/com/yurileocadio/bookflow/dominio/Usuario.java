@@ -5,6 +5,7 @@ public abstract class Usuario {
     private int idade;
     private String cpf;
     private String endereco;
+    private int totalLivrosEmprestados;
 
     public Usuario(String nome, int idade, String cpf, String endereco) {
         this.nome = nome;
@@ -16,6 +17,14 @@ public abstract class Usuario {
     public abstract int getLimiteLivros();
 
     public abstract int getPrazoDevolucao();
+
+    public void registrarEmprestimo(){
+        this.totalLivrosEmprestados += 1;
+    }
+
+    public void registrarDevolucao(){
+        this.totalLivrosEmprestados -= 1;
+    }
 
     public String getNome() {
         return nome;
@@ -51,5 +60,9 @@ public abstract class Usuario {
 
     public void setEndereco(String endereco) {
         this.endereco = endereco;
+    }
+
+    public int getTotalLivrosEmprestados() {
+        return totalLivrosEmprestados;
     }
 }

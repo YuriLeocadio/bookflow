@@ -1,7 +1,7 @@
 package com.yurileocadio.bookflow.dominio;
 
 public class Aluno extends Usuario {
-    public Aluno(String nome, int idade, int cpf, String endereco) {
+    public Aluno(String nome, int idade, String cpf, String endereco) {
         super(nome, idade, cpf, endereco);
     }
 
