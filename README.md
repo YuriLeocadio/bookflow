@@ -10,11 +10,11 @@ A ideia é que o histórico de commits e branches conte a história real do apre
 
 ## 🚧 Status atual
 
-> Fase 1 (POO Básica) — em andamento. Toda a teoria de OOP (classes → polimorfismo) já foi estudada; o projeto em si ainda está sendo modelado e implementado.
+> Fase 1 (POO Básica) — concluída ✅. Próxima etapa: tratamento de exceções.
 
 ## 🗺️ Roadmap de evolução
 
-- [x] **1. POO Básica** — modelagem de `Livro`, `Usuário` e `Empréstimo` usando herança, interface, encapsulamento e polimorfismo 🔵
+- [x] **1. POO Básica** — modelagem de `Livro`, `Usuário` e `Empréstimo` usando herança, interface, encapsulamento e polimorfismo
 - [ ] **2. Tratamento de exceções** — exceção customizada para regra de negócio (ex: livro já emprestado) + carga inicial de dados via arquivo texto
 - [ ] **3. Coleções & Generics** — troca das listas soltas por `Map`/`Set`, com `Comparable`/`Comparator` para ordenação
 - [ ] **4. Streams** — relatórios gerados via Stream (ex: total emprestado por usuário) sem uso de `for` tradicional
@@ -35,11 +35,31 @@ A ideia é que o histórico de commits e branches conte a história real do apre
 
 ## 📂 Estrutura do projeto
 
-> Em construção — será detalhada assim que a modelagem das classes for definida.
+```
+src/main/java/
+└── com/yurileocadio/bookflow/
+    ├── Main.java                  # ponto de entrada, testes manuais dos fluxos
+    └── dominio/
+        ├── Emprestavel.java       # interface: capacidade de ser emprestado
+        ├── Livro.java             # implementa Emprestavel
+        ├── Usuario.java           # classe abstrata
+        ├── Aluno.java             # extends Usuario — limite de 3 livros
+        ├── Professor.java         # extends Usuario — limite maior
+        └── Emprestimo.java        # orquestra criação e devolução de empréstimos
+```
 
 ## ▶️ Como executar
 
-> Instruções serão adicionadas assim que a estrutura inicial estiver pronta.
+Pré-requisitos: JDK 25+ e Maven instalados.
+
+```bash
+git clone https://github.com/YuriLeocadio/bookflow.git
+cd bookflow
+mvn compile
+mvn exec:java -Dexec.mainClass="com.yurileocadio.bookflow.Main"
+```
+
+Ou, direto pelo IntelliJ: abra o projeto e rode a classe `Main` (botão ▶️ ao lado do método `main`).
 
 ## 🎯 Motivação
 
