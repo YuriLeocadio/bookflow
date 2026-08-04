@@ -29,7 +29,7 @@ A ideia é que o histórico de commits e branches conte a história real do apre
 
 ## 🛠️ Tecnologias
 
-**Atual:** Java 17+, gerenciador de dependências Maven
+**Atual:** Java 25, gerenciador de dependências Maven
 
 **Previstas ao longo da evolução:** JDBC, MySQL, Spring Boot, Spring Data JPA, Spring Security + JWT, Flyway, Swagger/OpenAPI, JUnit, Docker, AWS (EC2, RDS)
 
