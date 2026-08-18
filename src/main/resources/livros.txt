@@ -1,0 +1,18 @@
+Entendendo Algoritmos;Aditya Y. Bhargava;Tecnologia
+Hábitos Atômicos;James Clear;Desenvolvimento Pessoal
+Foco;Daniel Goleman;Desenvolvimento Pessoal
+Código Limpo;Robert C. Martin;Tecnologia
+O Programador Pragmático;Andrew Hunt e David Thomas;Tecnologia
+Comunicação e Liderança;Leny Kyrillos e Carlos Alberto Sardenberg;Liderança
+Ponto de Inflexão;Malcolm Gladwell;Comportamento
+Trabalho Focado;Cal Newport;Produtividade
+Refatoração: Aperfeiçoando o Design de Códigos Existentes;Martin Fowler;Tecnologia
+Padrões de Projeto: Soluções Reutilizáveis de Software Orientados a Objetos;Erich Gamma, Richard Helm, Ralph Johnson e John Vlissides;Tecnologia
+Arquitetura Limpa;Robert C. Martin;Tecnologia
+Algoritmos: Teoria e Prática;Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest e Clifford Stein;Tecnologia
+O Que Todo Corpo Fala;Joe Navarro;Comportamento
+Manual de Persuasão do FBI;Jack Schafer e Marvin Karlins;Comportamento
+48 Leis do Poder;Robert Greene;Estratégia
++Esperto que o Diabo;Napoleon Hill;Desenvolvimento Pessoal
+O Poder do Subconsciente;Joseph Murphy;Desenvolvimento Pessoal
+O Segredo;Rhonda Byrne;Autoajuda

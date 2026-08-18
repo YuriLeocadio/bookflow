@@ -1,5 +1,8 @@
 package com.yurileocadio.bookflow.dominio;
 
+import com.yurileocadio.bookflow.exception.LimiteEmprestimosException;
+import com.yurileocadio.bookflow.exception.LivroIndisponivelException;
+
 import java.time.LocalDate;
 
 public class Emprestimo {
@@ -15,13 +18,15 @@ public class Emprestimo {
         this.dataDevolucaoPrevista = LocalDate.now().plusDays(usuario.getPrazoDevolucao());
     }
 
-    public static Emprestimo criar(Usuario usuario, Livro livro) {
-        if (livro.verificarDisponibilidade() && usuario.getTotalLivrosEmprestados() < usuario.getLimiteLivros()) {
+    public static Emprestimo criar(Usuario usuario, Livro livro) throws LivroIndisponivelException, LimiteEmprestimosException {
+        if (!livro.verificarDisponibilidade()) {
+            throw new LivroIndisponivelException();
+        } else if (usuario.getTotalLivrosEmprestados() >= usuario.getLimiteLivros()) {
+            throw new LimiteEmprestimosException();
+        } else {
             usuario.registrarEmprestimo();
             livro.marcarComoEmprestado();
             return new Emprestimo(usuario, livro);
-        } else {
-            return null;
         }
     }
 

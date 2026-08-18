@@ -1,0 +1,5 @@
+aluno;João;20;12345678900;Rua A
+aluno;Ana;22;23456789011;Rua das Flores, 45
+professor;Willian Suane;33;34567890122;Rio de Janeiro
+professor;Gustavo Guanabara;40;45678901233;Rio de Janeiro
+professor;MatheusLF;28;56789012344;São Paulo
