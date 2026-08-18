@@ -10,12 +10,12 @@ A ideia é que o histórico de commits e branches conte a história real do apre
 
 ## 🚧 Status atual
 
-> Fase 1 (POO Básica) — concluída ✅. Próxima etapa: tratamento de exceções.
+> Fase 2 (Tratamento de exceções) — concluída ✅. Próxima etapa: coleções & generics.
 
 ## 🗺️ Roadmap de evolução
 
 - [x] **1. POO Básica** — modelagem de `Livro`, `Usuário` e `Empréstimo` usando herança, interface, encapsulamento e polimorfismo
-- [ ] **2. Tratamento de exceções** — exceção customizada para regra de negócio (ex: livro já emprestado) + carga inicial de dados via arquivo texto
+- [x] **2. Tratamento de exceções** — exceção customizada para regra de negócio (ex: livro já emprestado) + carga inicial de dados via arquivo texto
 - [ ] **3. Coleções & Generics** — troca das listas soltas por `Map`/`Set`, com `Comparable`/`Comparator` para ordenação
 - [ ] **4. Streams** — relatórios gerados via Stream (ex: total emprestado por usuário) sem uso de `for` tradicional
 - [ ] **5. Padrões de projeto** — aplicação de ao menos 2 padrões (ex: Builder para objetos complexos, Factory para tipos de usuário)
@@ -36,16 +36,25 @@ A ideia é que o histórico de commits e branches conte a história real do apre
 ## 📂 Estrutura do projeto
 
 ```
-src/main/java/
-└── com/yurileocadio/bookflow/
-    ├── Main.java                  # ponto de entrada, testes manuais dos fluxos
-    └── dominio/
-        ├── Emprestavel.java       # interface: capacidade de ser emprestado
-        ├── Livro.java             # implementa Emprestavel
-        ├── Usuario.java           # classe abstrata
-        ├── Aluno.java             # extends Usuario — limite de 3 livros
-        ├── Professor.java         # extends Usuario — limite maior
-        └── Emprestimo.java        # orquestra criação e devolução de empréstimos
+src/main/
+├── java/
+│   └── com/yurileocadio/bookflow/
+│       ├── Main.java                  # ponto de entrada, testes manuais dos fluxos
+│       ├── dominio/
+│       │   ├── Emprestavel.java       # interface: capacidade de ser emprestado
+│       │   ├── Livro.java             # implementa Emprestavel
+│       │   ├── Usuario.java           # classe abstrata
+│       │   ├── Aluno.java             # extends Usuario — limite de 3 livros
+│       │   ├── Professor.java         # extends Usuario — limite maior
+│       │   └── Emprestimo.java        # orquestra criação e devolução, via factory method
+│       ├── exception/
+│       │   ├── LivroIndisponivelException.java
+│       │   └── LimiteEmprestimosException.java
+│       └── arquivo/
+│           └── CargaDadosIniciais.java # lê livros.txt e usuarios.txt via Scanner
+└── resources/
+    ├── livros.txt                     # dados iniciais de livros (formato: titulo;autor;tema)
+    └── usuarios.txt                   # dados iniciais de usuários (formato: tipo;nome;idade;cpf;endereco)
 ```
 
 ## ▶️ Como executar
@@ -56,7 +65,7 @@ Pré-requisitos: JDK 25+ e Maven instalados.
 git clone https://github.com/YuriLeocadio/bookflow.git
 cd bookflow
 mvn compile
-mvn exec:java -Dexec.mainClass="com.yurileocadio.bookflow.Main"
+mvn exec:java
 ```
 
 Ou, direto pelo IntelliJ: abra o projeto e rode a classe `Main` (botão ▶️ ao lado do método `main`).
